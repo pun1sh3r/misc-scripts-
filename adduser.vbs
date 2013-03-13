@@ -1,6 +1,5 @@
 
 
-
 Dim RootDSE,mydomain
 Dim input
 ' strTitle="New User Manager"
@@ -10,7 +9,7 @@ set RootDSE=GetObject("LDAP://RootDSE")
 'Set mydomain=GetObject("LDAP://OU=AOC Users,dc=D0300002,dc=AOC")
 Set mydomain=GetObject("LDAP://OU=Scripting_Lab,dc=D0300002,dc=AOC")
 
-'set mydomain=GetObject("LDAP://OU=Scripting_lab," & "OU=" & strOU & ",dc=D0300002,dc=AOC")
+'set mydomain=GetObject("LDAP://OU=Scripting_lab," & "OU=" & strOU & ",dc=,dc=AOC")
 myDomainADSPath=mydomain.ADSPath  	
 myDomainPath=MID(mydomain.ADSPath,8)
 
