@@ -5,8 +5,8 @@ get_servers_from_file
 Sub send_alert_email(strAttachment)
   Dim objEMail
 	Set objEMail = CreateObject("CDO.Message")
-	objEMail.From = "diskmon@jud11.flcourts.org"
-	objEMail.To = "lmendieta@jud11.flcourts.org"
+	objEMail.From = ""
+	objEMail.To = ""
 	objEMail.Subject = "Disk Monitor Alert"
 	objEMail.TextBody = "Please see attached file for Server Disk Info"
 	
@@ -47,7 +47,7 @@ Sub get_servers_from_file()
 	filetxt.WriteLine("*                        SERVER  DISK MONITOR                                 *")
 	filetxt.WriteLine("*                                                                             *")
 	filetxt.WriteLine("*               designed to monitor and report disk usage                     *")
-	filetxt.WriteLine("*                     developed by Luis Mendieta                              *")
+	filetxt.WriteLine("*                     developed by pun1sh3r                                   *")
 	filetxt.WriteLine("*******************************************************************************")
 		Do until objTextFile.AtEndOfStream
 			strdata = objTextFile.ReadLine
