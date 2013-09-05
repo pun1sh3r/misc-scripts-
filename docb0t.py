@@ -46,7 +46,7 @@ def addUser(name,username,email):
 	passwd = passwd_gen(20)
 	mailbody = "%s %s %s" % (email,username,passwd)
 	try:
-		cuser = ou.create_user(username,password=passwd,upn_suffix=None,enable=True,optional_attributes={"description" : "penLabUser","displayName": name, "mail" : email})
+		cuser = ou.create_user(username,password=passwd,upn_suffix=None,enable=True,optional_attributes={"description" : "labUser","displayName": name, "mail" : email})
 		confirmation = "user %s has been created\n" % (username)
 		sendEmail(mailbody,"noreply@test.net","test.net")
 	except:
